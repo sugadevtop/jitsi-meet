@@ -332,7 +332,7 @@ function _mapStateToProps(state) {
         _localParticipantId: getLocalParticipant(state)?.id,
         _participants: showRemoteVideos ? remoteParticipants : NO_REMOTE_VIDEOS,
         _toolboxVisible: isToolboxVisible(state),
-        _visible: enabled && isFilmstripVisible(state)
+        _visible: enabled && isFilmstripVisible(state) && isToolboxVisible(state)
     };
 }
 
